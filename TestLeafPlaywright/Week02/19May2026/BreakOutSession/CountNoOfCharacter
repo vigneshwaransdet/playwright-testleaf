@@ -1,0 +1,20 @@
+// let value= Java
+// let count=0
+// count no.of 'a' is present
+// for loop 
+// if(a===i) 
+// count++
+// print the count value 
+
+
+// output : 2
+
+let value = 'Java'
+let count = 0
+
+for (let i=0; i < value.length; i++) {
+    if(value[i]==='a') {
+        count++
+    }
+}
+console.log(count)
