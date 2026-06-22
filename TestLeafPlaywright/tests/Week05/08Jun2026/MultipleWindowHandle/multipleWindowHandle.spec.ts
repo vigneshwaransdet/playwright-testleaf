@@ -24,27 +24,26 @@ test("Multiple window",async({page,context})=> {
     let webTable : any
     let dashboard : any
 
-    // for(let i=0; i<count.length; i++){
-    //     const title = await count[i].title()
-    //     console.log(title)      
-    //     await count[i].waitForTimeout(3000)          
-    // }
-
     for(let i=0; i<count.length; i++){
         const title = await count[i].title()
         if(title==='Web Table'){
             //control webtable
-            webTable = count[i]   
+            webTable = count[i]  
+            await page.waitForTimeout(2000) 
             console.log(title)         
         } else if(title==='Dashboard') {
             //control dashboard
-            dashboard = count[i]   
+            dashboard = count[i] 
+            await page.waitForTimeout(2000)  
             console.log(title)         
+        } else {
+            await page.waitForTimeout(2000)
+            console.log(title)
         }
     }    
 
-    // await webTable.locator("//input[@name='form:j_idt89:globalFilter']").fill("Japan")
+    // await webTable.locator("//input[@name='form:j_idt89:globalFilter']").fill("Japan")    
     await webTable.waitForTimeOut(2000)
-    await webTable.locator("//input[@placeholder='Search']").fill("Japan")
-
+    await webTable.waitForDOMContent(2000)//Not working
+    await webTable.locator("//input[@placeholder='Search']").fill("Japan")        
 })
