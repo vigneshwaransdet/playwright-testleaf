@@ -1,34 +1,30 @@
-// Assignment Requirements:
-// 1. Declare a let name as browserVersion (global)
-// 2. Assign value as Chrome
-// 3. Create a function by name getBrowserVersion
-// 4. Create if condition inside function to check if browser is chrome, then
-// 5. Declare a local variable (browserVersion) and print that variable inside function (outside block)
-// 6. Call that function from the javascript
-
 // reference code : 
 
-/*
-var firstName="Bhuvanesh"
-var firstName="Akila"// redeclaration is allowed
-console.log(firstName) 
-firstName="vignesh" // reinitialization is allowed
-console.log(firstName) 
-console.log(empNo) // hoisting is allowed
-var empNo= 1234 
-// keyword 
-function print(){//body // function scope
+/* let firstName="Bhuvanesh"
+// redeclaration is not allowed
+//let firstName="Akila" // SyntaxError: Identifier 'firstName' has already been declared
+firstName="Vignesh" // reintialization is allowed
+console.log(firstName)
+//console.log(empNO) // hoisting is not allowed
+//let empNO=1652
+function print(){//body 
 // local variable    
- var empAge=25 
+ let empAge=25 
  {
     //local variable
-    var empPhno=897979697987;  
+    let empPhno=897979697987;  // block scope
  }
- console.log(empPhno)
+ console.log(empPhno) //ReferenceError: empPhno is not defined
 }
-print()
-//console.log(empPhno)
-*/
+print() */
+
+/* Assignment Requirements:
+1. Declare a let name as browserVersion (global)
+2. Assign value as Chrome
+3. Create a function by name getBrowserVersion
+4. Create if condition inside function to check if browser is chrome, then
+5. Declare a local variable (browserVersion) and print that variable inside function (outside block)
+6. Call that function from the javascript */
 
 //Scenario: using let keyword
 let browserVersion = "Chrome"; // global variable  

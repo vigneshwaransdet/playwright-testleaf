@@ -38,6 +38,7 @@ export default defineConfig({
     headless:false,
     screenshot:'on',
     video:'on',
+    // ignoreHTTPSErrors: true//we can use if any cert error or issue facing time
   },
 
   /* Configure projects for major browsers */
