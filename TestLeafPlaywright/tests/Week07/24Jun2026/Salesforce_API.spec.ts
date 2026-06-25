@@ -21,8 +21,8 @@ test("Generate Token", async ({ request }) => {
             //  also not pushing this file SF_ClientSecrets.json to git
             "client_id": sf_Client_Secrets.client_Id,
             "client_secret":sf_Client_Secrets.client_Secret,
-            "username": "vigneshwaransdet.65585ce5b958@agentforce.com",
-            "password": "Qazplm!852BfaHyjykKU04vA0kbPYDZo54"
+            "username": sf_Client_Secrets.userName,
+            "password": sf_Client_Secrets.passWord
         }
     })
     let response = await token.json()
