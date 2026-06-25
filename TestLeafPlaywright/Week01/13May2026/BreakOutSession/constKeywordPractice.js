@@ -1,36 +1,33 @@
-// Assignment Requirements:
-// 1. Declare a const name as browserVersion (global)
-// 2. Assign value as Chrome
-// 3. Create a function by name getBrowserVersion
-// 4. Create if condition inside function to check if browser is chrome, then
-// 5. Declare a local variable (browserVersion) and print that variable inside function (outside block)
-// 6. Call that function from the javascript
-
-
-
 // reference code : 
 
-/*
-var firstName="Bhuvanesh"
-var firstName="Akila"// redeclaration is allowed
+/* 
+const firstName="Bhuvanesh"
+//const firstName="Akila" // declaration is not allowed
+// reintialization in not allowed
+//firstName="Vignesh" // TypeError: Assignment to constant variable.
 console.log(firstName) 
-firstName="vignesh" // reinitialization is allowed
-console.log(firstName) 
-console.log(empNo) // hoisting is allowed
-var empNo= 1234 
-// keyword 
-function print(){//body // function scope
+// console.log(empNo) //ReferenceError: empNo is not defined // hoisting is not allowed
+// const empNo=1624
+// function scope or blocked scoped
+function print(){//body 
 // local variable    
- var empAge=25 
+ const empAge=25 
  {
     //local variable
-    var empPhno=897979697987;  
+    const empPhno=897979697987;  // Block scoped
  }
- console.log(empPhno)
+ console.log(empPhno) 
 }
 print()
-//console.log(empPhno)
-*/
+ */
+
+/* Assignment Requirements:
+1. Declare a const name as browserVersion (global)
+2. Assign value as Chrome
+3. Create a function by name getBrowserVersion
+4. Create if condition inside function to check if browser is chrome, then
+5. Declare a local variable (browserVersion) and print that variable inside function (outside block)
+6. Call that function from the javascript */
 
 //Scenario: using const keyword
 const browserVersion = "Chrome"; // global variable  
