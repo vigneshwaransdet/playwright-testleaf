@@ -25,7 +25,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   // reporter: 'html',
-  reporter: [['html',{open:'always'}]],
+  reporter: [['html', { open: 'always' }]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('')`. */
@@ -35,10 +35,11 @@ export default defineConfig({
     // trace: 'on-first-retry',
 
     trace: 'on',
-    headless:false,
-    screenshot:'on',
-    video:'on',
+    headless: false,
+    screenshot: 'on',
+    video: 'on',
     // ignoreHTTPSErrors: true//we can use if any cert error or issue facing time
+    permissions: ['notifications', 'geolocation'],
   },
 
   /* Configure projects for major browsers */
@@ -46,24 +47,25 @@ export default defineConfig({
     {
       name: 'chrome',
       // use: { ...devices['Desktop Chrome'] },
-      use: {channel: 'chrome',
-      viewport:null,
-      launchOptions:{
-        args:['--start-maximized','--disable-notifications']        
+      use: {
+        channel: 'chrome',
+        viewport: null,
+        launchOptions: {
+          args: ['--start-maximized', '--disable-notifications']
+        },
       },
     },
-  },
 
-  //   {
-  //     name: 'edge',
-  //     // use: { ...devices['Desktop Chrome'] },
-  //     use: { channel: 'msedge',
-  //     viewport:null,
-  //     launchOptions:{
-  //       args:['--start-maximized']
-  //     },
-  //   },
-  // }
+    //   {
+    //     name: 'edge',
+    //     // use: { ...devices['Desktop Chrome'] },
+    //     use: { channel: 'msedge',
+    //     viewport:null,
+    //     launchOptions:{
+    //       args:['--start-maximized']
+    //     },
+    //   },
+    // }
     /* {
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
